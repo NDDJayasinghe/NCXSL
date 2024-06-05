@@ -16,16 +16,11 @@ header {
 
 header .logo {
     width: 100px;
+    transition: transform 0.3s ease;
 }
 
-header h1 {
-    margin: 10px 0;
-    font-size: 2.5em;
-}
-
-header p {
-    font-size: 1.2em;
-    margin: 5px 0;
+header .logo:hover {
+    transform: scale(1.1);
 }
 
 /* Landing Section Styles */
@@ -40,6 +35,10 @@ header p {
 #landing p {
     font-size: 1.2em;
     margin: 20px 0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
 }
 
 .cta-button {
@@ -50,11 +49,12 @@ header p {
     color: #ffffff;
     text-decoration: none;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .cta-button:hover {
     background-color: #333333;
+    transform: scale(1.05);
 }
 
 /* Services Section Styles */
@@ -68,17 +68,65 @@ header p {
     margin-bottom: 20px;
 }
 
-.service {
-    margin-bottom: 30px;
+.services-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.service h3 {
+.service-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 300px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.service-card img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.service-info {
+    padding: 20px;
+}
+
+.service-info h3 {
     font-size: 1.5em;
     margin-bottom: 10px;
 }
 
-.service p {
+.service-info p {
     font-size: 1.1em;
+}
+
+.price {
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.details-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #000000;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.details-button:hover {
+    background-color: #333333;
+    transform: scale(1.05);
 }
 
 /* Contact Section Styles */
@@ -96,34 +144,51 @@ header p {
     margin: 10px 0;
 }
 
+/* Service Detail Section Styles */
+#service-detail {
+    padding: 50px 20px;
+}
+
+#service-detail h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#service-detail img {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px 0;
+}
+
+#service-detail p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+#service-detail .price {
+    font-weight: bold;
+    font-size: 1.3em;
+    margin: 20px 0;
+}
+
 /* Footer Styles */
 footer {
-    background-color: #000000;
-    color: #ffffff;
+    background-color: #f4f4f4;
     padding: 20px 0;
+    margin-top: 50px;
 }
 
 footer .logo-footer {
-    width: 50px;
-    margin-bottom: 10px;
+    width: 100px;
+    transition: transform 0.3s ease;
+}
+
+footer .logo-footer:hover {
+    transform: scale(1.1);
 }
 
 footer p {
     font-size: 0.9em;
-}
-
-/* Smooth Scroll Styles */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2em;
-    }
-
-    .cta-button {
-        padding: 8px 16px;
-    }
+    color: #555555;
+    margin: 10px 0 0;
 }
